@@ -16,6 +16,7 @@ public class UserService {
     }
 
     public List<User> getallusers() {
-      return  userRepository.findAll();
+
+      return userRepository.findAll() ;
     }
 }
