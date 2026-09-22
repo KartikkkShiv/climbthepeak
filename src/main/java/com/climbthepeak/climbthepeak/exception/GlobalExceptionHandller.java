@@ -14,7 +14,9 @@ public class GlobalExceptionHandller {
     @ExceptionHandler(UserException.class)
     public ResponseEntity<String>handleUserexception (UserException exception)
     {
-        return ResponseEntity.status(401).body("USernotfound Exception");
+        ErrorResponse errorResponse = new ErrorResponse(exception.getMessage(),404);
+
+        return ResponseEntity.status(errorResponse.status).body(errorResponse.message);
     }
 
 
