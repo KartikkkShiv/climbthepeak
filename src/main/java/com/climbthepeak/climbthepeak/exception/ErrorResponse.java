@@ -10,6 +10,7 @@ public ErrorResponse(String message , int status)
     {
         this.message = message ;
         this.status = status;
+     manoj ; 
     }
 
 }
